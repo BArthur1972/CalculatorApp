@@ -1,0 +1,237 @@
+.button{
+	-fx-font-size:15pt;
+	-fx-font-weight:900;
+}
+
+
+.root{
+	-fx-background-color:dimgrey;
+}
+
+
+
+.principal{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.rate{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+
+
+.time{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+
+.mortgage{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.sin{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+
+.cos{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.tan{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.log{
+	-fx-background-color:yellow;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.arcsin{
+	-fx-background-color:red;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+
+
+.arccos{
+	-fx-background-color:green;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.arctan{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.openbracket{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+.closebracket{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+.squareroot{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.square{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.pie{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+
+.exponent{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.clear{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+.delete{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+.divide{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+.percent{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+.seven{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.eight{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.nine{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.four{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+
+.five{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.six{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.one{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+.two{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+.three{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+.zero{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+.point{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+.equal{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+}
+
+.plus{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.multiply{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+.minus{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
