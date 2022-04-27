@@ -10,8 +10,19 @@ import javafx.geometry.*;
 import javafx.collections.*;
 import java.util.*;
 
+import javafx.event.EventHandler;
+import javafx.event.ActionEvent;
 
 public class CalculatorApp extends Application{
+
+	String operator = "";
+
+	public double a = 0;
+	public double b = 0;
+
+	double result = 0;
+
+	// Utilities utils = new Utilities();
 
 	TextArea display;
 	HBox hbox0;
@@ -66,13 +77,14 @@ public class CalculatorApp extends Application{
 
 
 
-	public static void main(String[] args){
+	public static void main(String[] args)
+	{
 		launch(args);
-
 	}
 
 	@Override
-	public void start(Stage primaryStage){
+	public void start(Stage primaryStage)
+	{
 		// App Title
 		primaryStage.setTitle("Calculator App");
 
@@ -118,6 +130,7 @@ public class CalculatorApp extends Application{
 
         // Buttons on second row
 		sinBtn = new Button("sin");
+		sinBtn.setOnAction(new SinHandler());
 		sinBtn.setPrefWidth(55);
 		sinBtn.setPrefHeight(20);
 		sinBtn.getStyleClass().add("sin");
@@ -125,6 +138,7 @@ public class CalculatorApp extends Application{
 
 
 		cosBtn = new Button("cos");
+		cosBtn.setOnAction(new CosHandler());
 		cosBtn.setPrefWidth(55);
 		cosBtn.setPrefHeight(20);
 		cosBtn.getStyleClass().add("cos");
@@ -132,6 +146,7 @@ public class CalculatorApp extends Application{
 
 
 		tanBtn = new Button("tan");
+		tanBtn.setOnAction(new TanHandler());
 		tanBtn.setPrefWidth(55);
 		tanBtn.setPrefHeight(20);
 		tanBtn.getStyleClass().add("tan");
@@ -200,8 +215,6 @@ public class CalculatorApp extends Application{
 
 
 
-
-
 		squareBtn = new Button("x" + "\u00B2");
 		squareBtn.setPrefWidth(36.6);
 		squareBtn.setPrefHeight(20);
@@ -231,6 +244,7 @@ public class CalculatorApp extends Application{
 
 		// Buttons on fifth row
 		clearBtn = new Button("C");
+		clearBtn.setOnAction(new ClearHandler());
 		clearBtn.setPrefWidth(55);
 		clearBtn.setPrefHeight(20);
 		clearBtn.getStyleClass().add("clear");
@@ -260,6 +274,7 @@ public class CalculatorApp extends Application{
 
 		// Buttons on sixth row
 		sevenBtn = new Button("7");
+		sevenBtn.setOnAction((new sevenHandler()));
 		sevenBtn.setPrefWidth(45);
 		sevenBtn.setPrefHeight(20);
 		sevenBtn.getStyleClass().add("seven");
@@ -373,4 +388,53 @@ public class CalculatorApp extends Application{
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
+
+
+	class ClearHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			Utilities.clear(display);
+		}
+	}
+
+
+	class SinHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			Utilities.getSin(display);
+		}
+	}
+
+	class CosHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			Utilities.getCos(display);
+		}
+	}
+
+	class TanHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			Utilities.getTan(display);
+		}
+	}
+
+	class sevenHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.setText("7");
+		}
+	}
+
+
+
 }
