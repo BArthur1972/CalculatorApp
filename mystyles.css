@@ -1,23 +1,27 @@
-.button{
+.button
+{
 	-fx-font-size:15pt;
 	-fx-font-weight:900;
 }
 
 
-.root{
+.root
+{
 	-fx-background-color:dimgrey;
 }
 
 
 
-.principal{
+.principal
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
 
-.rate{
+.rate
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
@@ -25,7 +29,8 @@
 }
 
 
-.time{
+.time
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
@@ -33,39 +38,45 @@
 
 
 
-.mortgage{
+.mortgage
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
 
-.sin{
+.sin
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
 
 }
 
-.cos{
+.cos
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
-.tan{
+.tan
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
-.log{
+.log
+{
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
-.arcsin{
+.arcsin
+{
 	-fx-background-color:red;
 	-fx-border-width:90;
 	-fx-padding:0;
@@ -73,46 +84,58 @@
 }
 
 
-.arccos{
+.arccos
+{
 	-fx-background-color:green;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
 
-.arctan{
+.arctan
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
 
-.openbracket{
+.openbracket
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 
 }
-.closebracket{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
-}
-.squareroot{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
-}
 
 
-.square{
+
+.closebracket
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
 
-.pie{
+.squareroot
+{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.square
+{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.pie
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
@@ -120,38 +143,59 @@
 
 
 
-.exponent{
+.exponent
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
 
-.clear{
+.clear
+{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+
+
+}
+
+
+.delete
+{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
+
+.divide
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 
 }
-.delete{
+
+
+
+.percent
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
-.divide{
+
+
+
+.seven
+{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
-.percent{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
-}
-.seven{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
-}
+
+
+
 
 .eight{
 	-fx-background-color:blue;
@@ -159,11 +203,15 @@
 	-fx-padding:0;
 }
 
+
+
 .nine{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
+
+
 
 .four{
 	-fx-background-color:blue;
@@ -172,11 +220,14 @@
 
 }
 
+
+
 .five{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
+
 
 .six{
 	-fx-background-color:blue;
@@ -184,33 +235,47 @@
 	-fx-padding:0;
 }
 
+
+
 .one{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
+
+
+
 .two{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
+
+
 .three{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 }
+
+
 .zero{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 
-}
+}  
+
+
+
 .point{
 	-fx-background-color:blue;
 	-fx-border-width:90;
 	-fx-padding:0;
 
 }
+
+
 .equal{
 	-fx-background-color:blue;
 	-fx-border-width:90;

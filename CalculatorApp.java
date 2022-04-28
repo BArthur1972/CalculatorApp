@@ -209,6 +209,7 @@ public class CalculatorApp extends Application{
 
 
 		sqrRootBtn = new Button("\u221A");
+		sqrRootBtn.setOnAction(new squareRootHandler());
 		sqrRootBtn.setPrefWidth(36.6);
 		sqrRootBtn.setPrefHeight(20);
 		sqrRootBtn.getStyleClass().add("squareroot");
@@ -216,6 +217,7 @@ public class CalculatorApp extends Application{
 
 
 		squareBtn = new Button("x" + "\u00B2");
+		squareBtn.setOnAction(new squarehandler());
 		squareBtn.setPrefWidth(36.6);
 		squareBtn.setPrefHeight(20);
 		squareBtn.getStyleClass().add("square");
@@ -282,6 +284,7 @@ public class CalculatorApp extends Application{
 
 
 		eightBtn = new Button("8");
+		eightBtn.setOnAction((new eightHandler()));
 		eightBtn.setPrefWidth(45);
 		eightBtn.setPrefHeight(20);
 		eightBtn.getStyleClass().add("eight");
@@ -289,6 +292,7 @@ public class CalculatorApp extends Application{
 
 
 		nineBtn = new Button("9");
+		nineBtn.setOnAction(new nineHandler());
 		nineBtn.setPrefWidth(45);
 		nineBtn.setPrefHeight(20);
 		nineBtn.getStyleClass().add("nine");
@@ -306,18 +310,21 @@ public class CalculatorApp extends Application{
 
 		// Buttons on seventh row
 		fourBtn = new Button("4");
+		fourBtn.setOnAction(new fourHandler());
 		fourBtn.setPrefWidth(45);
 		fourBtn.setPrefHeight(20);
 		fourBtn.getStyleClass().add("four");
 
 
 		fiveBtn = new Button("5");
+		fiveBtn.setOnAction(new fiveHandler());
 		fiveBtn.setPrefWidth(45);
 		fiveBtn.setPrefHeight(20);
 		fiveBtn.getStyleClass().add("five");
 
 
 		sixBtn = new Button("6");
+		sixBtn.setOnAction(new sixHandler());
 		sixBtn.setPrefWidth(45);
 		sixBtn.setPrefHeight(20);
 		sixBtn.getStyleClass().add("six");
@@ -335,17 +342,20 @@ public class CalculatorApp extends Application{
 
 		// Buttons on eigth row
 		oneBtn = new Button("1");
+		oneBtn.setOnAction(new oneHandler());
 		oneBtn.setPrefWidth(45);
 		oneBtn.setPrefHeight(20);
 		oneBtn.getStyleClass().add("one");
 
 		twoBtn = new Button("2");
+		twoBtn.setOnAction(new twoHandler());
 		twoBtn.setPrefWidth(45);
 		twoBtn.setPrefHeight(20);
 		twoBtn.getStyleClass().add("two");
 
 
 		threeBtn = new Button("3");
+		threeBtn.setOnAction(new threeHandler());
 		threeBtn.setPrefWidth(45);
 		threeBtn.setPrefHeight(20);
 		threeBtn.getStyleClass().add("three");
@@ -360,11 +370,13 @@ public class CalculatorApp extends Application{
 
 		// Buttons on ninth row
 		zeroBtn = new Button("0");
+		zeroBtn.setOnAction(new zeroHandler());
 		zeroBtn.setPrefWidth(55);
 		zeroBtn.setPrefHeight(20);
 		zeroBtn.getStyleClass().add("zero");
 
 		pointBtn = new Button(".");
+		pointBtn.setOnAction(new pointHandler());
 		pointBtn.setPrefWidth(55);
 		pointBtn.setPrefHeight(20);
 		pointBtn.getStyleClass().add("point");
@@ -427,13 +439,169 @@ public class CalculatorApp extends Application{
 		}
 	}
 
+	class nineHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("9");
+		}
+	}
+
+
+	class eightHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("8");
+		}
+	}
+
+
 	class sevenHandler implements EventHandler<ActionEvent>
 	{
 		@Override
 		public void handle(ActionEvent event){
-			display.setText("7");
+			display.appendText("7");
 		}
 	}
+
+	class sixHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("6");
+		}
+	}
+
+	class fiveHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("5");
+		}
+	}
+
+
+	class fourHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("4");
+		}
+	}
+
+	class threeHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("3");
+		}
+	}
+
+	class twoHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("2");
+		}
+	}
+
+	class oneHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("1");
+		}
+	}
+
+	class zeroHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText("0");
+		}
+	}
+	class pointHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			display.appendText(".");
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	class logHandeler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			Utilities.getLog(display);
+		}
+	}
+
+
+	class sinInverseHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			Utilities.getSinInverse(display);
+		} 
+	}
+
+
+	class cosInverseHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			Utilities.getCosInverse(display);
+		} 
+	}
+
+	// class logInverseHandler implements EventHandler<ActionEvent>
+	// {
+	// 	@Override
+	// 	public void handle(ActionEvent event){
+	// 		Utilities.getLogInverse(display);
+	// 	} 
+	// }
+
+
+	class tanInverseHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			Utilities.getTanInverse(display);
+		} 
+	}
+
+	class squareRootHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			Utilities.getSquareRoot(display);
+		} 
+	}
+
+	class squarehandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			Utilities.getSquare(display);
+		}
+	}
+
+
+
+
+
+
 
 
 
