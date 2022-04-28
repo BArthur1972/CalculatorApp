@@ -1,50 +1,49 @@
 # CalculatorApp
 
 ## Introduction
-This is a command-line-based interactive program that will ask the user to enter their symptoms. I have trained five machine learning models on a dataset that includes a set of symptoms and their corresponding diseases.
+This is a java-fx based interactive program that will take that presents a screen to the user to enter values whether basic calculations or trigonomeic problems. We have provided buttons for each number, operation, and trigonometric identities.
 
-When the program is initialized, it will ask the user how he or she is feeling and ask them to enter their symptoms. The program will store these symptoms as a numpy array and implement the machine learning algorithms on them. It will return the predicted disease which will be displayed as output.
+When the program is initialized, it will pop up a window also known as a stage in this context thereby allowing interaction with the user. The program will store these inputs and pass them through the inbuilt methods we have in place. After the inputs have passed through methods, the results would be displayed in a text box on the screen to the user as the output.
 
 ## How to Run
 - To run the program, first download all the files and upload them to an IDE of your choice.
-- Next, you need to go to the terminal or shell and run the following code snippet:
-```python
-python app.py
+- Next, you need to go to the terminal or shell, then cd into the directory of where the project files are stored.
+- Input and run the following code snippet which will compile the code:
+```java
+javac --module-path /<user path>/javafx-sdk-18/lib --add-modules javafx.controls,javafx.fxml CalculatorApp.java
 ```
-- The program should ask you to enter your symptoms separated by commas like so:
-```Dehydration,Loss Of Appetite, Abdominal Pain, Diarrhoea```
+- Input and run the following code snippet which will launch the calculator:
+```java
+java --module-path /<user path>/javafx-sdk-18/lib --add-modules javafx.controls,javafx.fxml CalculatorApp
+```
 
-- Enter the symptoms and hit enter to get your diagnosis.
+
 
 ## File Description
-### 1. app.py
-- This is where the driver code for the program is stored and executed from. 
-- It contains the functions:
+### 1. mystyles.css
+- This is where the display/outlook code for the program is stored and executed from. 
+- It also contains formatting codes to edit how the graphic user interface is presented to the user.
+- Below we have few out of many classes that were created:
 
-i. ```create_gui()``` - which sets up all the widgets in the Tkinter GUI.
+i. ```button``` - this is a class assigned to all buttons in the GUI that dictates the size and weight.
 
-ii. ```on_predict()``` - which makes use of all the functions in predict_tools.py to predict the user's disease.
+ii. ```multiply``` - this is a class assigned to dictate the backgroud color.
 
-iii. ```clear_textbox()```- which clears the textbox when the clear button is pressed.
+iii. ```sin```- this is a class assigned to dictate the padding.
 
-iv. ```main()```- which executes the program.
+iv. ```closebracket```- this is a class that dictates the border width.
 
-### 2. predict_tools.py
+### 2. CalculatorApp.java
 
 In this file you will find all the helper fuctions for this program. They are listed below:    
-i. ```take_input()```
-    - Takes in input from the user and stores them in a list separated by commas.
+i. ```main()```
+    - This launches the whole program.
 
-ii. ```create_input_symptoms()```
-    - Creates a list containing symptoms in a form that can be recognized by models using fuzzy string matching.
+ii. ```start()```
+    - This is where all the buttons are initialized and text file is prompted.
 
-iii. ```create_input_data()```
-    - Creates a numpy array containing entries such that the users inputs assigned to 1 and the remaining assigned to 0.
 
-iv. ```predict_disease()```
-    - Loads the machine learning models and uses them to predict a disease based on the input data. It does this by taking the mode(most occurrences) of all five predictions since there are five models trained with five different classifiers.
-
-### 3. ml_algorithm.py
+### 3. Utilities.java
 - In this file you will find the code which I used to build, train and evaluate all five machine learning models. You can run this file to see how well the models are performing. I used the following metrics to judge.
     * precision
     * accuracy
@@ -57,30 +56,3 @@ iv. ```predict_disease()```
 ```
 - You will see the evaluation metrics for all five models printed.
 
-### 4. test_ml_algorithm.py
-- In this file, I will implement the trained models on Testing.csv. This csv file is similar to Training.csv but is smaller and has different entries. If I get similar results for the metrics accounted for while training the models, then I can say that the models are working well.
-- To run the file, run the code snippet below in the terminal or shell:
-```python
-python test_ml_algorithm.py
-```
-- You should see the performance metrics of the models on the testing dataset. 
-
-### 4. directory.py
-- This file contains the data structures that hold the valid symptom names and disease names. They are:
-    * SYMPTOM_NAMES - which is a dictionary containing all the valid symptom names as keys and their corresponding indices as values.
-    * ORIGINAL_PROGNOSIS - a numpy array containing all the valid prognosis names.
-    * DATA_DICT - a dictionary containing symptom_indexes and SYMPTOM_NAMES as a key-value pair and prediction_classes and ORIGINAL_PROGNOSIS as the second key-value pair.
-### 5. Training.csv
-- It contains the data I used to train the machine learning models.
-
-### 6. Testing.csv
-- it contains the dataset I used to test the machine learning models.
-
-### 7. saved_models
-This folder contains five pkl files that are the five trained machine learning models which I created using the joblib library. They are:
-
-    i. svm_model.pkl
-    ii. naive_bayes_model.pkl
-    iii. decision_tree_model.pkl
-    iv. k_nearest_neighbors_model.pkl
-    v. random_forest_model.pkl
