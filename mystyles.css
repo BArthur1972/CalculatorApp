@@ -283,6 +283,12 @@
 
 }
 
+.ans{
+	-fx-background-color:blue;
+	-fx-border-width:90;
+	-fx-padding:0;
+}
+
 .plus{
 	-fx-background-color:blue;
 	-fx-border-width:90;
