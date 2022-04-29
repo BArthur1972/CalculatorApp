@@ -15,14 +15,8 @@ import javafx.event.ActionEvent;
 
 public class CalculatorApp extends Application{
 
-	String operator = "";
 
-	public double a = 0;
-	public double b = 0;
-
-	double result = 0;
-
-	// Utilities utils = new Utilities();
+	Utilities utils = new Utilities();
 
 	TextArea display;
 	HBox hbox0;
@@ -70,10 +64,10 @@ public class CalculatorApp extends Application{
 	Button zeroBtn;
 	Button pointBtn;
 	Button equalBtn;
+	Button answerBtn;
 	HBox hbox9;
 	VBox vbox;
 	Scene scene;
-
 
 
 
@@ -99,12 +93,14 @@ public class CalculatorApp extends Application{
 
 		// Buttons on first row
 		principalBtn = new Button("p");
+		principalBtn.setOnAction(new PrincipalHandler());
 		principalBtn.getStyleClass().add("principal");
 		principalBtn.setPrefWidth(55);
 		principalBtn.setPrefHeight(20);
 
 
 		rateBtn = new Button("r");
+		rateBtn.setOnAction(new RateHandler());
 		rateBtn.setPrefHeight(20);
 		rateBtn.setPrefWidth(55);
 		rateBtn.getStyleClass().add("rate");
@@ -112,12 +108,14 @@ public class CalculatorApp extends Application{
 
 
 		timeBtn = new Button("n");
+		timeBtn.setOnAction(new TimeHandler());
 		timeBtn.setPrefWidth(55);
 		timeBtn.setPrefHeight(20);
 		timeBtn.getStyleClass().add("time");
 
 
 		mortgageBtn = new Button("mg");
+		mortgageBtn.setOnAction(new MortgageHandler());
 		mortgageBtn.setPrefHeight(20);
 		mortgageBtn.setPrefWidth(55);
 		mortgageBtn.getStyleClass().add("mortgage");
@@ -164,23 +162,23 @@ public class CalculatorApp extends Application{
 
 		// Buttons on third row
 		sinInverseBtn = new Button("arcsin");
+		sinInverseBtn.setOnAction(new sinInverseHandler());
 		sinInverseBtn.setPrefWidth(73.33);
 		sinInverseBtn.setPrefHeight(20);
 		sinInverseBtn.getStyleClass().add("arcsin");
 
 
 
-
 		cosInverseBtn = new Button("arccos");
+		cosInverseBtn.setOnAction(new cosInverseHandler());
 		cosInverseBtn.setPrefWidth(73.33);
 		cosInverseBtn.setPrefHeight(20);
 		cosInverseBtn.getStyleClass().add("arccos");
 
 
 
-
-
 		tanInverseBtn = new Button("arctan");
+		tanInverseBtn.setOnAction(new tanInverseHandler());
 		tanInverseBtn.setPrefWidth(73.33);
 		tanInverseBtn.setPrefHeight(20);
 		tanInverseBtn.getStyleClass().add("arctan");
@@ -195,6 +193,7 @@ public class CalculatorApp extends Application{
 
 		// Buttons on fourth row
 		openParenthesesBtn = new Button("(");
+		openParenthesesBtn.setOnAction(new OpenParenthesesHandler());
 		openParenthesesBtn.setPrefWidth(36.6);
 		openParenthesesBtn.setPrefHeight(20);
 		openParenthesesBtn.getStyleClass().add("openbracket");
@@ -202,6 +201,7 @@ public class CalculatorApp extends Application{
 
 
 		closeParenthesesBtn = new Button(")");
+		closeParenthesesBtn.setOnAction(new CloseParenthesesHandler());
 		closeParenthesesBtn.setPrefWidth(36.6);
 		closeParenthesesBtn.setPrefHeight(20);
 		closeParenthesesBtn.getStyleClass().add("closebracket");
@@ -226,6 +226,7 @@ public class CalculatorApp extends Application{
 
 
 		pieBtn = new Button("\u03c0");
+		pieBtn.setOnAction(new PieHandler());
 		pieBtn.setPrefWidth(36.6);
 		pieBtn.setPrefHeight(20);
 		pieBtn.getStyleClass().add("pie");
@@ -233,6 +234,7 @@ public class CalculatorApp extends Application{
 
 
 		exponent = new Button("e");
+		exponent.setOnAction(new ExponentHandler());
 		exponent.setPrefWidth(36.6);
 		exponent.setPrefHeight(20);
 		exponent.getStyleClass().add("exponent");
@@ -254,24 +256,26 @@ public class CalculatorApp extends Application{
 
 
 		deleteBtn = new Button("DEL");
+		deleteBtn.setOnAction(new DeleteHandler());
 		deleteBtn.setPrefWidth(55);
 		deleteBtn.setPrefHeight(20);
 		deleteBtn.getStyleClass().add("delete");
 
 
 		percentBtn = new Button("%");
+		percentBtn.setOnAction(new PercentHandler());
 		percentBtn.setPrefWidth(55);
 		percentBtn.setPrefHeight(20);
 		percentBtn.getStyleClass().add("percent");
 
 		divideBtn = new Button("\u00F7");
+		divideBtn.setOnAction(new DivideHandler());
 		divideBtn.setPrefWidth(55);
 		divideBtn.setPrefHeight(20);
 		divideBtn.getStyleClass().add("divide");
 
 		hbox5 = new HBox(4,clearBtn, deleteBtn, percentBtn, divideBtn);
 		hbox5.setAlignment(Pos.CENTER);
-
 
 
 		// Buttons on sixth row
@@ -300,6 +304,7 @@ public class CalculatorApp extends Application{
 
 
 		multiplyBtn = new Button("X");
+		multiplyBtn.setOnAction(new MultiplyHandler());
 		multiplyBtn.setPrefWidth(45);
 		multiplyBtn.setPrefHeight(20);
 		multiplyBtn.getStyleClass().add("multiply");
@@ -331,6 +336,7 @@ public class CalculatorApp extends Application{
 
 
 		minusBtn = new Button("-");
+		minusBtn.setOnAction(new Minushandler());
 		minusBtn.setPrefWidth(45);
 		minusBtn.setPrefHeight(20);
 		minusBtn.getStyleClass().add("minus");
@@ -361,6 +367,7 @@ public class CalculatorApp extends Application{
 		threeBtn.getStyleClass().add("three");
 
 		plusBtn = new Button("+");
+		plusBtn.setOnAction(new PlusHandler());
 		plusBtn.setPrefWidth(45);
 		plusBtn.setPrefHeight(20);
 		plusBtn.getStyleClass().add("plus");
@@ -371,23 +378,30 @@ public class CalculatorApp extends Application{
 		// Buttons on ninth row
 		zeroBtn = new Button("0");
 		zeroBtn.setOnAction(new zeroHandler());
-		zeroBtn.setPrefWidth(55);
+		zeroBtn.setPrefWidth(45);
 		zeroBtn.setPrefHeight(20);
 		zeroBtn.getStyleClass().add("zero");
 
 		pointBtn = new Button(".");
 		pointBtn.setOnAction(new pointHandler());
-		pointBtn.setPrefWidth(55);
+		pointBtn.setPrefWidth(45);
 		pointBtn.setPrefHeight(20);
 		pointBtn.getStyleClass().add("point");
 
 
 		equalBtn = new Button("=");
-		equalBtn.setPrefWidth(55);
+		equalBtn.setOnAction(new EqualHandler());
+		equalBtn.setPrefWidth(45);
 		equalBtn.setPrefHeight(20);
 		equalBtn.getStyleClass().add("equal");
 
-		hbox9 = new HBox(32.5,zeroBtn, pointBtn, equalBtn);
+		answerBtn = new Button("Ans");
+		answerBtn.setOnAction(new AnswerHandler());
+		answerBtn.setPrefWidth(45);
+		answerBtn.setPrefHeight(20);
+		answerBtn.getStyleClass().add("ans");
+
+		hbox9 = new HBox(17, zeroBtn, pointBtn, answerBtn ,equalBtn);
 		hbox9.setAlignment(Pos.CENTER);
 
 		// Vbox containing all the Hboxes
@@ -401,13 +415,79 @@ public class CalculatorApp extends Application{
 		primaryStage.show();
 	}
 
+	class PrincipalHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			utils.addPrincipal(display);
+		}
+	}
+
+	class RateHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			utils.addRate(display);
+		}
+	}
+
+
+	class TimeHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			utils.addTime(display);
+		}
+	}
+
+	class MortgageHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			utils.getMortgage(display);
+		}
+	}
+
 
 	class ClearHandler implements EventHandler<ActionEvent>
 	{
 		@Override
 		public void handle(ActionEvent event){
 
-			Utilities.clear(display);
+			utils.clear(display);
+		}
+	}
+
+
+	class DeleteHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			utils.delete(display);
+		}
+	}
+
+
+	class OpenParenthesesHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			display.appendText("(");
+		}
+	}
+
+	class CloseParenthesesHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+
+			display.appendText(")");
 		}
 	}
 
@@ -417,7 +497,7 @@ public class CalculatorApp extends Application{
 		@Override
 		public void handle(ActionEvent event){
 
-			Utilities.getSin(display);
+			utils.getSin(display);
 		}
 	}
 
@@ -426,7 +506,7 @@ public class CalculatorApp extends Application{
 		@Override
 		public void handle(ActionEvent event){
 
-			Utilities.getCos(display);
+			utils.getCos(display);
 		}
 	}
 
@@ -435,7 +515,34 @@ public class CalculatorApp extends Application{
 		@Override
 		public void handle(ActionEvent event){
 
-			Utilities.getTan(display);
+			utils.getTan(display);
+		}
+	}
+
+	class PercentHandler implements EventHandler<ActionEvent> {
+
+		@Override
+		public void handle(ActionEvent event) {
+
+			utils.getPercentage(display);
+		}
+	}
+
+	class PieHandler implements EventHandler<ActionEvent> {
+
+		@Override
+		public void handle(ActionEvent event) {
+
+			utils.getPie(display);
+		}
+	}
+
+	class ExponentHandler implements EventHandler<ActionEvent> {
+
+		@Override
+		public void handle(ActionEvent event) {
+
+			utils.getExponential(display);
 		}
 	}
 
@@ -532,17 +639,11 @@ public class CalculatorApp extends Application{
 
 
 
-
-
-
-
-
-
 	class logHandeler implements EventHandler<ActionEvent>
 	{
 		@Override
 		public void handle(ActionEvent event){
-			Utilities.getLog(display);
+			utils.getLog(display);
 		}
 	}
 
@@ -551,7 +652,7 @@ public class CalculatorApp extends Application{
 	{
 		@Override
 		public void handle(ActionEvent event){
-			Utilities.getSinInverse(display);
+			utils.getSinInverse(display);
 		} 
 	}
 
@@ -560,24 +661,16 @@ public class CalculatorApp extends Application{
 	{
 		@Override
 		public void handle(ActionEvent event){
-			Utilities.getCosInverse(display);
+			utils.getCosInverse(display);
 		} 
 	}
-
-	// class logInverseHandler implements EventHandler<ActionEvent>
-	// {
-	// 	@Override
-	// 	public void handle(ActionEvent event){
-	// 		Utilities.getLogInverse(display);
-	// 	} 
-	// }
 
 
 	class tanInverseHandler implements EventHandler<ActionEvent>
 	{
 		@Override
 		public void handle(ActionEvent event){
-			Utilities.getTanInverse(display);
+			utils.getTanInverse(display);
 		} 
 	}
 
@@ -585,7 +678,7 @@ public class CalculatorApp extends Application{
 	{
 		@Override
 		public void handle(ActionEvent event){
-			Utilities.getSquareRoot(display);
+			utils.getSquareRoot(display);
 		} 
 	}
 
@@ -593,16 +686,57 @@ public class CalculatorApp extends Application{
 	{
 		@Override
 		public void handle(ActionEvent event){
-			Utilities.getSquare(display);
+			utils.getSquare(display);
 		}
 	}
 
+	class PlusHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			utils.addPlus(display);
+		}
+	}
 
+	class Minushandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			utils.addMinus(display);
+		}
+	}
 
+	class DivideHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			utils.addDivide(display);
+		}
+	}
 
+	class MultiplyHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			utils.addMultiply(display);
+		}
+	}
 
+	class EqualHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			utils.equals(display);
+		}
+	}
 
-
+	class AnswerHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent event){
+			utils.storeAnswer(display);
+		}
+	}
 
 
 }
