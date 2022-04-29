@@ -47,10 +47,10 @@ ii. ```start()```
 In this file you will find the code which worked as a back hand for the program running. Also, in this file you will find all the additional helper fuctions for this program. They are listed below:  
 i. ```clear()```
  - This clears out numbers or calculations visible on the screen. 
- 
+
 ii. ```delete()```
  - This allows for a user to delete certain numbers or signs that might have been clicked on in error.
- 
+
 iii. ```getSin()```
 - This allows for calculations that involve getting the sine value of numbers to be accounted for.
 
