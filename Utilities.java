@@ -1,3 +1,6 @@
+// basic libraries necessary in the implementation 
+// are imported and used, including javaFx
+
 import javafx.application.Application;
 import javafx.stage.*;
 import javafx.scene.*;
@@ -16,7 +19,12 @@ import javafx.event.ActionEvent;
 import java.math.*;
 import java.text.DecimalFormat;
 
+// main class that serves as 
+// control house, to drive
+// the calculators functionality
+
 public class Utilities 
+	
 
 {
 
@@ -27,91 +35,234 @@ public class Utilities
 
 	double result = 0;
 
-	//For mortgage
+//For mortgage calculation functionality 
+// P reprsents the principal,
+// Principal is the money that you originally agreed to pay back. 
+// Starts the mortgage calculation process
 	double p = 0;
+	
+// R reprsents the rate
+// The interest rate is the amount a lender charges a borrower 
+//and is a percentage of the principal—the amount loaned. 
+//The interest rate on a loan is typically noted on an annual basis 
+//known as the annual percentage rate (APR). 
 	double r = 0;
+	
+	
+// T reprsents the time
+//time take for the mortage loan to be paid
+// has a massive contribution to the toatl outcome 
+// of the loan with intrest
 	int t = 0;
+	
+	
+// for decimal functionality 
 
 	DecimalFormat df = new DecimalFormat("0.00");
-
-	public void clear(TextArea textArea) {
-
+	
+	
+// function for the clear button
+// replaces text on the text area with an empty string
+// indirectly clearing everything on the text area
+	
+	public void clear(TextArea textArea) 
+	{
+		
+//gets text from text area
 		textArea.setText("");
+		
 		result = 0;
 	}
+	
+	//function to delete the items on textview
+	//removes last item form the textview
+	// indirectly deletes last item
 
-	public void delete(TextArea textArea) {
+	public void delete(TextArea textArea) 
+		// this is a void funtion
+	{
+		// current context in textarea
+		
 		String s = textArea.getText();
+		
 		textArea.setText("");
-		for(int i=0;i<s.length()-1;i++) {
+		
+		//reconstructing string to skip the last item
+		
+		// relays the new string
+		
+		for(int i=0;i<s.length()-1;i++) 
+		{
+			//for loop to go over items in the extracted string in the text view
+			
 			textArea.setText(textArea.getText()+s.charAt(i));
 		}
 	}
-
+	
+	
+// evaluates the sin operation
 	public void getSin (TextArea textArea) 
+		// doesn not return anything
 	{
 		String s_Result = "";
+		
+		// current context in textarea
 		a = Double.parseDouble(textArea.getText());
+		
+		// converts double to radians for cosine operation
+		//to be perfomed on
+		
+		
+		//evaluates the sin function operation and stores it in
+		// the variable result
+		
 		result = Math.sin(Math.toRadians(a));
+		
 		s_Result = Double.toString(result);
+		// presents the results in the text area
+		
 		textArea.setText("sin"+"("+a+")"+ "\n"+ s_Result);
 	}
-
+	
+// evaluates the cos operation
+	
 	public void getCos (TextArea textArea) 
+		// doesn not return anything
 	{
 		String s_Result = "";
+		// current context in textarea
+		
 		a = Double.parseDouble(textArea.getText());
+		
+		// converts double to radians for cosine operation
+		//to be perfomed on
+		
+		//performs the cosine function 
+		
 		result = Math.cos(Math.toRadians(a));
 		s_Result = Double.toString(result);
+		
+		// returns the result to the user on the textArea
 		textArea.setText("cos"+"("+a+")"+ "\n"+ s_Result);
 	}
+	
+	// evaluates the tan operation
 
 	public void getTan (TextArea textArea) 
+		// doesn not return anything
 	{
 		String s_Result = "";
+		// current context in textarea
+		
 		a = Double.parseDouble(textArea.getText());
+		
+		// converts double to radians for cosine operation
+		//to be perfomed on
+		
+		//performs the tangent function 
+		
 		result = Math.tan(Math.toRadians(a));
+		
+		// converts result to string
 		s_Result = Double.toString(result);
+		
+		// returns the result to the user on the textArea
+		
 		textArea.setText("tan"+"("+a+")"+ "\n"+ s_Result);
 	}
+	
+// evaluates the log operation
 
 
 	public void getLog(TextArea textArea)
+		// doesn not return anything
 	{
 		String s_Result = "";
+		// current context in textarea
+		
 	    a = Double.parseDouble(textArea.getText());
+		
+		// converts double to radians for cosine operation
+		//to be perfomed on
+		
+		//performs the logarithim function 
+		
 		result = Math.log10(a);
+		// converts result to string
+		
 		s_Result = Double.toString(result);
+		
+		// returns the result to the user on the textArea
+		
 		textArea.setText("log"+"("+a+")"+ "\n"+ s_Result);
 	}
+	
+	// evaluates the sinInverse operation
 
 	public void getSinInverse(TextArea textArea)
+		// doesn not return anything
 	{
 		String s_Result = "";
+		// current context in textarea
+		
 		a = Double.parseDouble(textArea.getText());
+		
+		// converts double to radians for cosine operation
+		//to be perfomed on
+		
+		
+		//in other to cath the error from sinInverse
+		
 			if (a>1)
 				textArea.setText("Math Error");
+		
+		
 			else 
+				//perfomes the sinInverse operation
 			{
 				double result = Math.asin(a);
+				
 				result = Math.toDegrees(result);
+				//converts result to degerees
+				
 				s_Result = Double.toString(result);
+				//converts the result to a string 
+				
+				// returns the result to the user on the textArea
 				textArea.setText("sin-1("+a+")"+"\n"+s_Result);
 			}
 
 	}
+	
+	// evaluates the cosInverse operation
 
 	public void getCosInverse(TextArea textArea)
+		// doesn not return anything
 	{
 		String s_Result = "";
+		// current context in textarea
+		
 		a = Double.parseDouble(textArea.getText());
+		
+		// converts double to radians for cosine operation
+		//to be perfomed on
+		
+		
+		//in other to cath the error from sinInverse
 			if (a>1)
 				textArea.setText("cos-1("+a+")"+"\n"+"Math Error");
 			else
+				//perfomes the coseInverse operation
 			{
 				result = Math.acos(a);
+				
+				//converts result to degerees
 				result = Math.toDegrees(result);
+				
+				//converts the result to a string
 				s_Result = Double.toString(result);
+				
+				// returns the result to the user on the textArea
 				textArea.setText(s_Result);
 			}
 
