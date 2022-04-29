@@ -27,7 +27,7 @@ java --module-path /<user path>/javafx-sdk-18/lib --add-modules javafx.controls,
 
 i. ```button``` - this is a class assigned to all buttons in the GUI that dictates the size and weight.
 
-ii. ```multiply``` - this is a class assigned to dictate the backgroud color.
+ii. ```multiply``` - this is a class assigned to dictate the background color.
 
 iii. ```sin```- this is a class assigned to dictate the padding.
 
@@ -35,7 +35,7 @@ iv. ```closebracket```- this is a class that dictates the border width.
 
 ### 2. CalculatorApp.java
 
-In this file you will find all the helper fuctions for this program. They are listed below:    
+In this file you will find all the helper functions for this program. They are listed below:    
 i. ```main()```
     - This launches the whole program.
 
@@ -44,7 +44,7 @@ ii. ```start()```
 
 
 ### 3. Utilities.java
-In this file you will find the code which worked as a back hand for the program running. Also, in this file you will find all the additional helper fuctions for this program. They are listed below:  
+In this file you will find the code which worked as a back hand for the program running. Also, in this file you will find all the additional helper functions for this program. They are listed below:  
 i. ```clear()```
  - This clears out numbers or calculations visible on the screen. 
 
