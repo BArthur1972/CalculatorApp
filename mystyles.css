@@ -1,23 +1,125 @@
+/*
+genral styling of Calculator page 
+and layout design
+*/
+
+
+/*
+Gave a general blue print of 
+the the buttons, how the font size 
+should be the and how legible it 
+should look to the user
+*/
+
 .button
 {
 	-fx-font-size:15pt;
 	-fx-font-weight:900;
+	-fx-font-family: Serif;
 }
 
+
+/*
+
+Styled the area where the text 
+would be seen a inserted  and results
+would also be displayed, 
+
+i wanted a unique font , so consolas was used and i made
+ some major changes so it would be eye 
+ catching
+
+ */
+
+
+.text-area 
+{
+  -fx-font-family: Consolas;
+  -fx-font-size: 15pt;
+  -fx-highlight-fill: red;
+  -fx-highlight-text-fill: yellow;
+  -fx-text-fill: black;
+  -fx-background-color: #000000;
+}
+
+
+/*
+
+decided to edit the border-radius to the
+text area just to give it more visually
+pleasant
+
+*/
+
+.text-area
+{
+	-fx-border-radius: 70px;
+}
+
+
+
+/*
+
+decided to edit to edit the text-area
+ color to make the 
+ it more visually attractive
+
+*/
+
+
+ .text-area .content
+ {
+      -fx-background-color: #749133;
+
+  }
+
+/*
+
+main base of the app, 
+the overall base color that the 
+user sees decided to model it 
+after the fx-casio calculator, so the 
+color silver was used
+
+*/
 
 .root
 {
-	-fx-background-color:dimgrey;
+	/*-fx-background-color:dimgrey;*/
+	-fx-background-color: #C0C0C0;
+
 }
 
 
+/*
+specific styling for the principal 
+button, wanted it to standard out 
+on the page.
+
+I pricipally used yellow to make it 
+noticable
+*/
 
 .principal
 {
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	-fx-font-family: Serif;
+
 }
+
+/*
+Specific styling for the 
+rate button, wanted it to 
+stand out on the page, as it was 
+part of the main things we tried to implement
+
+the set class rate was used in styling
+
+*/
 
 
 .rate
@@ -25,8 +127,22 @@
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-font-family: Serif;
 
 }
+
+
+/*
+Specific styling for the time
+ button, wanted it to 
+stand out on the page, as it was 
+part of the main things we tried to 
+implement.
+
+the set class, time was used in 
+styling
+*/
 
 
 .time
@@ -34,8 +150,23 @@
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+
 }
 
+
+/*
+Specific styling was used  
+for the mortgage button,
+we wanted it to 
+stand out on the page, as it was 
+part of the main things we tried to 
+implement.
+
+the set class, mortgage was used in 
+styling
+*/
 
 
 .mortgage
@@ -43,246 +174,1060 @@
 	-fx-background-color:yellow;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	-fx-font-family: Serif;
+
 }
 
+
+/*
+
+Specific styling for one of the the most 
+important scienfic function 'Sine',
+we decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, sin was used in 
+styling
+
+*/
 
 .sin
 {
-	-fx-background-color:yellow;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	-fx-font-family: Serif;
 
 }
+
+
+
+/*
+
+Specific styling for one of the the most 
+important scienfic function 'Cosine',
+we decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, cos was used in 
+styling
+
+*/
 
 .cos
 {
-	-fx-background-color:yellow;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	-fx-font-family: Serif;
+
 }
+
+
+
+/*
+
+Specific styling for one of the the most 
+important scienfic function 'Tangent',
+we decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, tan was used in 
+styling
+
+*/
 
 .tan
 {
-	-fx-background-color:yellow;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	-fx-font-family: Serif;
+
 }
+
+
+/*
+
+Specific styling for one of the the most 
+important scienfic function 'Logarithim',
+we decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+
+The set class, log was used in 
+styling
+
+*/
 
 .log
 {
-	-fx-background-color:yellow;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	-fx-font-family: Serif;
+
 }
+
+
+/*
+
+Specific styling for one of the the most 
+important scienfic function 'Sin inverse'. 
+
+We decided to use the alternate name to 
+sine inverse which is 
+arcsine for developmental 
+purposes.
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, arcsine was used in 
+styling
+
+*/
 
 .arcsin
 {
-	-fx-background-color:red;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	-fx-font-family: Serif;
 
 }
+
+
+
+/*
+
+Specific styling fo one of the the most 
+important scienfic function 'Cos inverse'. 
+
+We decided to use the alternate name to sine inverse 
+which is arcsine for developmental
+purposes.
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+
+The set class, arccos was used in 
+styling
+
+*/
 
 
 .arccos
 {
-	-fx-background-color:green;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+
 }
+
+/*
+
+Specific styling for one of the the most 
+important scienfic function 'Tan inverse'. 
+
+We decided to use the alternate name to 
+sine inverse which is 
+arcsine for developmental 
+purposes.
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, arctan was used in 
+styling
+
+*/
 
 
 .arctan
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+
 }
+
+/*
+
+Specific styling for the open bracket 
+button, which contributes to how arithemtic 
+operations are carried out '. 
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, open bracket was used in 
+styling
+
+*/
+
 
 
 .openbracket
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	-fx-font-family: Serif;
 
 }
 
+/*
+Wanted to add a hover effect to the
+open bracket button,
+makes it more visually presnting
+*/
+
+.openbracket:hover
+{
+-fx-background-color: green;
+}
 
 
+/*
+
+Specific styling for the close bracket 
+button, which contributes to how arithemtic 
+operations are carried out '. 
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, closebracket was used in 
+styling
+
+*/
 .closebracket
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	-fx-font-family: Serif;
+
 }
 
 
+/*
+Wanted to add a hover effect to the
+square root button,
+makes it more visually presnting
+*/
+
+.closebracket:hover
+{
+-fx-background-color: green;
+}
+
+
+
+/*
+Specific styling for the square root button was 
+used. 
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, squareroot  was used in 
+styling
+*/
 .squareroot
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	
 }
 
 
+
+/*
+Wanted to add a hover effect to the
+square root button,
+makes it more visually presnting
+*/
+
+.squareroot:hover
+{
+-fx-background-color: green;
+}
+
+
+
+/*
+
+Specific styling for the  square button was 
+used. 
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, square  was used in 
+styling
+
+*/
 .square
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	
 }
 
 
+/*
+Wanted to add a hover effect to the
+square root button,
+makes it more visually presnting
+*/
+
+.square:hover
+{
+-fx-background-color: green;
+}
+
+
+
+
+/*
+Specific styling the pie button was 
+used. 
+certain predevloped code where used to 
+display the pie symbol.
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, pie  was used in 
+styling
+*/
 .pie
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
+	
 }
 
 
+/*
+Wanted to add a hover effect to the
+pie button,
+makes it more visually presnting
+*/
 
+.pie:hover
+{
+-fx-background-color: green;
+}
+
+/*
+Specific styling for the exponent button was 
+used. 
+certain e was used to 
+represnt the button symbol.
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also  decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, exponet  was used in 
+styling
+*/
 .exponent
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-text-fill: white;
+	-fx-border-radius: 70px;
+	
 }
+
+
+
+/*
+Wanted to add a hover effect to the
+exponent button,
+makes it more visually presnting
+*/
+
+.exponent:hover
+{
+-fx-background-color: green;
+}
+
+
+
+
+/*
+Specific styling for the clear button was 
+used. 
+The letter CEL was used to 
+represnt the button symbol.
+
+it contributes to how arithemtic 
+operations are carried out as it clears 
+what is in the text area '. 
+
+we also  decided to use the alternate between 
+orange and black.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, clear  was used in 
+styling
+*/
 
 .clear
 {
-	-fx-background-color:blue;
+	-fx-background-color:#CC5500;
 	-fx-border-width:90;
 	-fx-padding:0;
-
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
 
 }
 
 
+/*
+Specific styling for the delete button was 
+used. 
+ the letter del was used to 
+represnt the button symbol.
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also  decided to use the alternate between 
+orange and black.For the colors and button to
+stand out , 
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, exponet  was used in 
+styling
+*/
 .delete
 {
-	-fx-background-color:blue;
+	-fx-background-color:#CC5500;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+
 }
 
+
+
+/*
+Specific styling for the divide button was 
+used. 
+it contributes to how arithemtic 
+operations are carried out '. 
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+To make it 
+more visually presentable the border radius 
+was modified 
+The set class, divide was used in 
+styling
+
+*/
 
 .divide
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
-
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
 }
 
 
+
+/*
+Wanted to add a hover effect to the
+divde button,
+makes it more visually presnting
+*/
+
+.divide:hover
+{
+-fx-background-color: green;
+}
+
+
+
+/*
+Specific styling for the percent button was 
+used. 
+it contributes to how arithemtic 
+operations are carried out '. 
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+To make it 
+more visually presentable the border radius 
+was modified 
+The set class, percent was used in 
+styling
+
+*/
 
 .percent
 {
-	-fx-background-color:blue;
+	-fx-background-color:black;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: white;
 }
 
 
+/*
+Wanted to add a hover effect to the
+square root button,
+makes it more visually presnting
+*/
+
+.percent:hover
+{
+-fx-background-color: green;
+}
+
+
+
+
+/*
+
+Specific styling for the seven button was 
+used. 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+This button represents the number seven
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, seven was used in 
+styling
+
+*/
 
 .seven
 {
-	-fx-background-color:blue;
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
-}
-
-
-
-
-.eight{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
-}
-
-
-
-.nine{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
-}
-
-
-
-.four{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	
 
 }
 
+/*
+
+Specific styling for the eight button was 
+used. 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+This button represents the number eight
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, eight was used in 
+styling
+
+*/
 
 
-.five{
-	-fx-background-color:blue;
+.eight
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	
+	
 }
 
+/*
 
-.six{
-	-fx-background-color:blue;
+Specific styling for the nine button was 
+used. 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+This button represents the number nine
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, nine was used in 
+styling
+
+*/
+
+
+.nine
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	
 }
 
+/*
+
+Specific styling for the four button was 
+used. 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+This button represents the number four
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, four was used in 
+styling
+
+*/
 
 
-.one{
-	-fx-background-color:blue;
+.four
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	
 }
 
+/*
+
+Specific styling for the five button was 
+used. 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+This button represents the number five
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, five was used in 
+styling
+
+*/
 
 
-.two{
-	-fx-background-color:blue;
+.five
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	
+
 }
 
+/*
 
-.three{
-	-fx-background-color:blue;
+Specific styling for the six button was 
+used. 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+This button represents the number six
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, six was used in 
+styling
+
+*/
+
+
+.six
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+
 }
 
+/*
 
-.zero{
-	-fx-background-color:blue;
+Specific styling for the one button was 
+used. 
+
+This button represents the number one 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, one was used in 
+styling
+
+*/
+
+.one
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+
+}
+
+/*
+
+Specific styling for the two button was 
+used. 
+
+This button represents the number two
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, two was used in 
+styling
+
+*/
+
+.two
+{
+	-fx-background-color:white;
+	-fx-border-width:90;
+	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+
+}
+
+/*
+
+Specific styling for the three button was 
+used. 
+
+This button represents the number three 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, three was used in 
+styling
+
+*/
+
+
+.three
+{
+	-fx-background-color:white;
+	-fx-border-width:90;
+	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+
+}
+
+/*
+
+Specific styling for the zero button was 
+used. 
+
+This button represents the number zero 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, zero was used in 
+styling
+
+*/
+
+.zero
+{
+	-fx-background-color:white;
+	-fx-border-width:90;
+	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
 
 }  
 
+/*
 
+Specific styling for the point button was 
+used. 
 
-.point{
-	-fx-background-color:blue;
+This button represents the decimal point 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, point was used in 
+styling
+
+*/
+
+.point
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
-
+	-fx-border-radius: 70px;
+	
 }
 
 
-.equal{
-	-fx-background-color:blue;
+
+
+/*
+Specific styling for the equals was 
+used. 
+
+This button represents the equal to sign 
+
+it contributes to how arithemtic 
+operations are carried out '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, equal was used in 
+styling
+*/
+.equal
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
-
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
 }
 
+
+
+
+/*
+Wanted to add a hover effect to the
+equal button,
+makes it more visually presnting
+*/
+
+.equal:hover
+{
+-fx-background-color: green;
+}
+
+<<<<<<< HEAD
 .ans{
 	-fx-background-color:blue;
 	-fx-border-width:90;
@@ -291,18 +1236,143 @@
 
 .plus{
 	-fx-background-color:blue;
+=======
+
+
+
+
+/*
+Specific styling for the plus button was 
+used. 
+
+This button represents the plus sign
+
+it contributes to the arithmetic features 
+of the calculator '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, plus was used in 
+styling
+*/
+
+.plus
+{
+	-fx-background-color:white;
+>>>>>>> 8fbbb268010849419fe9cdb4912028608a51cc4a
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	
 }
 
-.multiply{
-	-fx-background-color:blue;
-	-fx-border-width:90;
-	-fx-padding:0;
+
+
+
+/*
+Wanted to add a hover effect to the
+plus button,
+makes it more visually presnting
+*/
+
+.plus:hover
+{
+-fx-background-color: green;
 }
 
-.minus{
-	-fx-background-color:blue;
+
+/*
+
+Specific styling for the multiply button was 
+used. 
+
+This button represents the multiply sign
+
+it contributes to the arithmetic features 
+of the calculator '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, multiply was used in 
+styling
+
+*/
+
+.multiply
+{
+	-fx-background-color:white;
 	-fx-border-width:90;
 	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+}
+
+
+/*
+Wanted to add a hover effect to the
+square root button,
+makes it more visually presnting
+*/
+
+.multiply:hover
+{
+-fx-background-color: green;
+}
+
+/*
+
+Specific styling for the minus button was 
+used. 
+
+This button represents the minus sign
+
+it contributes to the arithmetic features 
+of the calculator '. 
+
+we also decided to use the alternate between 
+black and white.For the colors , 
+so it could stand out.
+
+To make it 
+more visually presentable the border radius 
+was modified 
+
+The set class, minus was used in 
+styling
+
+*/
+
+.minus
+{
+	-fx-background-color:white;
+	-fx-border-width:90;
+	-fx-padding:0;
+	-fx-border-radius: 70px;
+	-fx-text-fill: black;
+	
+}
+
+
+/*
+Wanted to add a hover effect to the
+minus button,
+makes it more visually presnting
+*/
+
+.minus:hover
+{
+-fx-background-color: green;
 }
